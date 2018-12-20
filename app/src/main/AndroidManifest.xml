@@ -16,11 +16,10 @@
         <activity android:name=".ThirdActivity" />
         <activity android:name=".TestIntentActivity" />
         <activity
-            android:name=".TestResultActivity"
-            android:theme="@style/Theme.AppCompat.Dialog" />
-        <activity android:name=".WebViewActivity" />
-        <activity android:name=".TestListActivity">
+            android:name=".TestResultActivity" >
         </activity>
+        <activity android:name=".WebViewActivity" />
+        <activity android:name=".TestListActivity"></activity>
 
         <receiver android:name=".TestBroadCast">
             <intent-filter>
@@ -29,6 +28,8 @@
         </receiver>
 
         <activity android:name=".TestWebActivity">
+        </activity>
+        <activity android:name=".TestAsyncClientActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
