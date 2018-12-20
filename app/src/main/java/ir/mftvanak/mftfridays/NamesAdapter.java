@@ -46,10 +46,16 @@ public class NamesAdapter extends RecyclerView.Adapter<NamesAdapter.MyViewHolder
 
 
         TextView textView;
-        public MyViewHolder(@NonNull View itemView) {
+        public MyViewHolder(@NonNull final View itemView) {
             super(itemView);
 
             textView = itemView.findViewById(R.id.txtName);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+//                    itemView.getContext().startActivity();
+                }
+            });
         }
     }
 

@@ -3,6 +3,7 @@ package ir.mftvanak.mftfridays;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -52,7 +53,7 @@ public class TestListActivity extends AppCompatActivity {
         recycler.setAdapter(adapter);
 
 
-        recycler.setLayoutManager(new LinearLayoutManager(TestListActivity.this, LinearLayoutManager.VERTICAL, false));
+        recycler.setLayoutManager(new GridLayoutManager(TestListActivity.this, 2, RecyclerView.VERTICAL, false));
 
 
         new Thread(new Runnable() {
