@@ -15,11 +15,9 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".ThirdActivity" />
         <activity android:name=".TestIntentActivity" />
-        <activity
-            android:name=".TestResultActivity" >
-        </activity>
+        <activity android:name=".TestResultActivity"></activity>
         <activity android:name=".WebViewActivity" />
-        <activity android:name=".TestListActivity"></activity>
+        <activity android:name=".TestListActivity" />
 
         <receiver android:name=".TestBroadCast">
             <intent-filter>
@@ -27,9 +25,9 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".TestWebActivity">
-        </activity>
-        <activity android:name=".TestAsyncClientActivity">
+        <activity android:name=".TestWebActivity"></activity>
+        <activity android:name=".TestAsyncClientActivity"></activity>
+        <activity android:name=".TestNotificationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />

@@ -4,13 +4,16 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 
 import org.json.JSONObject;
+
 import cz.msebera.android.httpclient.Header;
 
 import androidx.appcompat.app.AppCompatActivity;
+import ir.mftvanak.mftfridays.aladhanmodel.AlAdhanModel;
 
 public class TestAsyncClientActivity extends AppCompatActivity {
 
@@ -19,7 +22,7 @@ public class TestAsyncClientActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_async_client);
 
-        String url = "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22tehran%2C%20ir%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys";
+        String url = "http://api.aladhan.com/v1/timingsByCity?city=Tehran&country=Iran&method=8";
 
         AsyncHttpClient client = new AsyncHttpClient();
         final TextView txt = findViewById(R.id.txt);
@@ -31,10 +34,13 @@ public class TestAsyncClientActivity extends AppCompatActivity {
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 super.onSuccess(statusCode, headers, response);
 
-                Log.d("MFTFRIDAYSTEST", "onSucess");
+
+                Gson gson = new Gson();
+                AlAdhanModel model = gson.fromJson(response.toString(), AlAdhanModel.class);
 
 
-                txt.setText(response.toString());
+               txt.setText(model.getData().getTimings().getFajr());
+
             }
 
 
