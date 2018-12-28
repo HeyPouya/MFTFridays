@@ -15,7 +15,7 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".ThirdActivity" />
         <activity android:name=".TestIntentActivity" />
-        <activity android:name=".TestResultActivity"></activity>
+        <activity android:name=".TestResultActivity" />
         <activity android:name=".WebViewActivity" />
         <activity android:name=".TestListActivity" />
 
@@ -25,17 +25,18 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".TestWebActivity"></activity>
-        <activity android:name=".TestAsyncClientActivity"></activity>
-        <activity android:name=".TestNotificationActivity">
+        <activity android:name=".TestWebActivity" />
+        <activity android:name=".TestAsyncClientActivity" />
+        <activity android:name=".TestNotificationActivity"></activity>
+        <activity android:name=".TestDBActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
+        <activity android:name=".TestMenuActivity"></activity>
     </application>
 
 </manifest>

@@ -20,9 +20,6 @@ public class TestNotificationActivity extends AppCompatActivity {
 
 
         showNotification("Attention!!!", "Open your app immediately");
-        SqlDBHelper helper = new SqlDBHelper(this,"students",null,1);
-        helper.inserToDB("city",100);
-        Toast.makeText(this,helper.getCities(),Toast.LENGTH_LONG).show();
     }
 
 
